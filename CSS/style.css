@@ -1,0 +1,274 @@
+/* تخصيص قائمة التنقل */
+/* شريط علوي مع تأثير اللمعة */
+nav {
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* تدرج ألوان داكنة */
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ظل خفيف للشريط */
+    overflow: hidden;
+}
+
+/* تنسيق اللوغو */
+.logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto; /* دفع اللوغو إلى الجهة اليمنى */
+    position: relative;
+    z-index: 1;
+}
+
+/* تنسيق قائمة الروابط */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1; /* جعل القائمة تأخذ المساحة المتاحة */
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* تنسيق عناصر القائمة */
+nav ul li {
+    margin-right: 20px; /* مسافة بين الروابط */
+}
+
+/* تنسيق الروابط */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #00ccff;
+}
+
+/* تأثير خاص عند المرور على اللوغو */
+.logo:hover {
+    text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 30px #00ccff, 0 0 40px #00ccff;
+}
+
+
+
+
+/* تنسيق صفحة الاتصال */
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.contact-info ul li a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins','Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+/* تأثير اللمعة المتحركة */
+header {
+    position: relative;
+    background: linear-gradient(45deg, #1c1c3c, #373b6b, #556080);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* تأثير التدرج المتحرك */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* لمعة تشبه المرآة بحركة غير خطية */
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px; /* تبدأ خارج الـ header */
+    width: 200px; /* عرض اللمعة */
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* لون لمعة شفاف */
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    ); /* التدرج يشبه تأثير المرآة */
+    transform: skewX(25deg); /* ميل اللمعة */
+    animation: mirrorShine 8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; /* حركة غير خطية */
+}
+
+/* حركة اللمعة غير الخطية */
+@keyframes mirrorShine {
+    0% {
+        left: -150px; /* تبدأ من خارج اليسار */
+    }
+   
+    100% {
+        left: 100%; /* تعود إلى البداية */
+    }
+}
+
+header {
+    background: linear-gradient(to right, #0066cc, #3399ff);
+    color: white;
+    padding: 50px 0;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.2em;
+}
+
+#skills ul {
+    padding: 0;
+    margin: 0;
+}
+
+#skills li {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0066cc;
+    color: white;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+}
+/*project page*/
+/* Global Styles */
+.card {
+    margin-bottom: 30px;
+    border-radius: 100px; /* حواف دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* لجعل جميع البطاقات بنفس الارتفاع */
+    display: flex;
+    flex-direction: column; /* جعل المحتويات في عمود */
+}
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-height: 200px; /* تحديد ارتفاع للصورة */
+    object-fit: cover; /* لضمان ملاءمة الصورة داخل البطاقة */
+}
+
+.card-body {
+    flex-grow: 1; /* لتمديد الجسم ليملأ المساحة المتبقية */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #0066cc;
+    border-color: #0066cc;
+}
+
+.btn-secondary {
+    background-color: #3399ff;
+    border-color: #3399ff;
+}
+carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
