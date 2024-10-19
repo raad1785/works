@@ -196,7 +196,7 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%; /* لجعل جميع البطاقات بنفس الارتفاع */
     display: flex;
-    flex-direction: column; /* جعل المحتويات في عمود */
+    flex-direction: row; /* جعل المحتويات في عمود */
 }
 
 .card-img-top {
@@ -277,13 +277,13 @@ carousel-container {
 /* Media Queries لتحسين التجاوب */
 @media (max-width: 768px) {
     nav {
-        flex-direction: row; /* التأكد من بقاء القائمة أفقية */
+        flex-direction: row;
         padding: 10px;
     }
 
     nav ul {
         margin-right: 0;
-        justify-content: space-around; /* جعل الروابط موزعة بشكل جيد */
+        justify-content: center;
     }
 
     .logo {
@@ -317,16 +317,6 @@ carousel-container {
 }
 
 @media (max-width: 480px) {
-    nav {
-        flex-direction: row; /* التأكد من بقاء القائمة أفقية */
-    }
-
-    nav ul {
-        flex-direction: row; /* التأكد من أن العناصر تبقى أفقية */
-        justify-content: space-around;
-        align-items: center;
-    }
-
     header {
         padding: 30px 0;
         font-size: 1em;
@@ -345,11 +335,14 @@ carousel-container {
         margin-bottom: 15px;
     }
 
-    .contact-info ul li {
-        font-size: 0.9em;
+    nav ul {
+        flex-direction: row;
+        align-items: center;
     }
-}
 
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .contact-info ul li {
