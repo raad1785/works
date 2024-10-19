@@ -279,7 +279,7 @@ carousel-container {
      @media (max-width: 768px) {
         nav ul {
             flex-direction: row; /* تأكد من بقاء القائمة أفقية */
-            justify-content: space-around; /* توزيع الروابط بشكل متساوٍ */
+            justify-content: flex-start; /* توزيع الروابط بشكل متساوٍ */
         }
     
     nav ul {
@@ -339,7 +339,7 @@ carousel-container {
     @media (max-width: 480px) {
         nav ul {
             flex-direction: row; /* تأكد من بقاء القائمة أفقية على الشاشات الصغيرة جداً */
-            justify-content: space-around; /* توزيع الروابط بالتساوي */
+            justify-content: flex-start; /* توزيع الروابط بالتساوي */
         }
     }
     nav ul li {
